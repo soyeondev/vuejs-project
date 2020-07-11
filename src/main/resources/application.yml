@@ -1,0 +1,30 @@
+spring:
+  datasource:
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+    url: jdbc:oracle:thin:@ubuntuoracle.cwnpujjctu0r.ap-northeast-2.rds.amazonaws.com:1521:ORCL
+    username: admin
+    password: 1234qwer
+
+  jpa:
+    hibernate:
+      ddl-auto: none
+    generate-ddl: false
+    #show-sql: true
+    database: mysql
+    #database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    database-platform: org.hibernate.dialect.MySQL5Dialect
+    properties:
+      hibernate:
+        enable_lazy_load_no_trans: true
+        format_sql: true
+    open-in-view: false
+
+logging:
+  #level:
+    #org:
+      #hibernate:
+        #SQL: DEBUG
+        #type:
+          #descriptor:
+            #sql:
+              #BasicBinder: TRACE
